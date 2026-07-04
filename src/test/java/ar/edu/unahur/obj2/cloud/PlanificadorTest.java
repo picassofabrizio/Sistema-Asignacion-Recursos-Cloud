@@ -52,8 +52,10 @@ public class PlanificadorTest {
         Planificador planificador = new Planificador(operaciones);
         OperacionesDeLiberacion operacionesDeLiberacion = new OperacionesDeLiberacion(new Cluster("Cluster1", sistemasInteresados));
         OperacionesDeAsignacion operacionesDeAsignacion = new OperacionesDeAsignacion(new Cluster("Cluster1", sistemasInteresados));
-        planificador.ejecutarOperacion(operacionesDeLiberacion, 10);
-        assert(planificador.getPlanDeDespliegue().size() == 1);
+        planificador.agregarOperacionPendiente(operacionesDeLiberacion);
+        planificador.agregarOperacionPendiente(operacionesDeAsignacion);
+        planificador.ejecutarPlanDeDespliegue(10);
+        assert(planificador.getPlanDeDespliegue().size() == 0);
     }
 
 }

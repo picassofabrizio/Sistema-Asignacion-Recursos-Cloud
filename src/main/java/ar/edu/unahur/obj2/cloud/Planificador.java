@@ -52,8 +52,4 @@ public class Planificador {
         }
         planDeDespliegue.clear();
     }
-
-    public void agregarOperacion(Operaciones operacion) {
-        planDeDespliegue.add(operacion);
-    }
 }
