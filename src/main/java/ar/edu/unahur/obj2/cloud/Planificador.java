@@ -33,7 +33,7 @@ public class Planificador {
         }
     }
 
-    public Planificador(HashSet<Operaciones> planDeDespliegue) {
+    public Planificador(Set<Operaciones> planDeDespliegue) {
         this.planDeDespliegue = planDeDespliegue;
     }
 
